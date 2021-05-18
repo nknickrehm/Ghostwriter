@@ -6,10 +6,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
+    env:
+      NODE_ENV: production
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - run: yarn zip
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          file: './dist/ghost-writer.zip'

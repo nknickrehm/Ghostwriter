@@ -49,7 +49,6 @@
     "bugs": "https://github.com/nknickrehm/ghost-writer/issues",
     "contributors": "https://github.com/nknickrehm/ghost-writer/graphs/contributors",
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.3",
         "@tryghost/release-utils": "^0.6.14",
         "autoprefixer": "^10.2.5",
         "cssnano": "5.0.2",

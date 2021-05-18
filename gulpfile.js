@@ -38,7 +38,6 @@ function css(done) {
         [
           'assets/css/**/*.css',
           'node_modules/prismjs/themes/prism-okaidia.css',
-          'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
         ],
         { sourcemaps: true },
       ),
@@ -59,7 +58,6 @@ function js(done) {
           'assets/js/lib/*.js',
           'assets/js/*.js',
           'node_modules/prismjs/prism.js',
-          'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
         ],
         {
           sourcemaps: true,

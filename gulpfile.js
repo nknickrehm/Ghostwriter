@@ -143,11 +143,13 @@ module.exports.release = async () => {
       uri: `https://api.github.com/repos/${REPO}/releases`,
     })
 
-    let previousVersion = '0.0.0'
-    if (releasesResponse && releasesResponse[0]) {
-      previousVersion = releasesResponse[0].tag_name || releasesResponse[0].name
-      console.log(`Previous version: ${previousVersion}`)
+    if (!releasesResponse || !releasesResponse[0]) {
+      console.log('No releases found. Skipping...')
+      return
     }
+
+    const previousVersion = releasesResponse[0].tag_name || releasesResponse[0].name
+    console.log(`Previous version: ${previousVersion}`)
 
     const changelog = new releaseUtils.Changelog({
       changelogPath: CHANGELOG_PATH,

@@ -1,0 +1,6 @@
+<ul>
+    {{#foreach navigation}}
+        <li class="block mb-2 hover:text-blue-400"><a href="{{url absolute="true"}}">{{#if
+                label}}{{label}}{{else}}{{name}}{{/if}}</a></li>
+    {{/foreach}}
+</ul>

@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.kg-width-wide, .kg-width-full {
+  /* not implemented */
+}
+
+.hide-if-suffix-is-1-1 {
+  @apply hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply break-words;
+}
+
+.button {
+  @apply inline-block rounded-full bg-gray-400 px-4 py-2 text-lg text-white font-bold outline-none;
+}
+
+.button:not([disabled]) {
+  @apply bg-blue-400 transform transition-all hover:scale-105 hover:bg-blue-500;
+}
+
+.button.red {
+  @apply bg-red-400 hover:bg-red-600;
+}
+
+.nav-item.active {
+  @apply bg-blue-400 text-white;
+}
+
+.nav-item.active:hover {
+  @apply bg-blue-500;
+}
+
+.content h1 {
+  @apply w-full text-5xl font-bold mt-20 mb-10;
+}
+
+.content h2 {
+  @apply text-4xl font-bold mt-20 mb-10;
+}
+
+.content h3 {
+  @apply text-3xl font-bold mt-20 mb-10;
+}
+
+.content p {
+  @apply my-10;
+}
+
+.content hr {
+  @apply my-20;
+}
+
+.content figure {
+  @apply my-10;
+}
+
+.content figure figcaption {
+  @apply mt-5 text-gray-600 text-center text-sm;
+}
+
+.content ul {
+  @apply list-disc pl-20;
+}
+
+.content ol {
+  @apply list-decimal pl-20;
+}
+
+.content li {
+  @apply mb-5;
+}
+
+.content pre {
+  @apply text-sm !important;
+}
+
+/* Bookmark card */
+.kg-bookmark-card {
+  @apply w-full relative;
+}
+
+.kg-bookmark-container {
+  @apply flex flex-wrap flex-row-reverse text-black border border-gray-100;
+}
+
+.kg-bookmark-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  padding: 20px;
+  order: 1;
+}
+
+.kg-bookmark-title {
+  font-weight: 600;
+}
+
+.kg-bookmark-metadata,
+.kg-bookmark-description {
+  margin-top: 0.5em;
+}
+
+.kg-bookmark-metadata {
+  @apply items-center whitespace-nowrap overflow-hidden overflow-ellipsis;
+}
+
+.kg-bookmark-description {
+  @apply overflow-hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.kg-bookmark-icon {
+  @apply inline-block align-text-bottom;
+
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.05em;
+}
+
+.kg-bookmark-thumbnail {
+  @apply flex;
+
+  flex-basis: 24rem;
+  flex-grow: 1;
+}
+
+.kg-bookmark-thumbnail img {
+  @apply max-w-full h-auto align-bottom object-cover;
+}
+
+.kg-bookmark-author {
+  @apply whitespace-nowrap overflow-ellipsis overflow-hidden;
+}
+
+.kg-bookmark-publisher::before {
+  content: "•";
+  margin: 0 0.5em;
+}
+
+/* Embedded video */
+.kg-embed-card {
+  @apply relative h-0 overflow-hidden;
+
+  padding-bottom: 56.25%;
+}
+
+.kg-embed-card iframe,
+.kg-embed-card object,
+.kg-embed-card embed {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Gallery */
+.kg-gallery-container {
+  @apply flex flex-col;
+}
+
+.kg-gallery-row {
+  @apply flex flex-row justify-center;
+}
+
+.kg-gallery-image img {
+  @apply block w-full h-full;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  @apply ml-2;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  @apply mt-2;
+}

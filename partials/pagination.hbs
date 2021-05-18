@@ -1,0 +1,14 @@
+<nav class="mt-10 flex justify-between hide-if-suffix-is-1-{{pages}}">
+    {{#if prev}}
+        <a href="{{page_url prev}}" class="button">Older posts</a>
+    {{else}}
+        <a class="button" disabled="disabled">Older Posts</a>
+    {{/if}}
+    <span>Page {{page}} of {{pages}}</span>
+    {{#if next}}
+        <a href="{{page_url next}}" class="button">Newer posts</a>
+    {{else}}
+        <a class="button" disabled="disabled">Newer Posts</a>
+    {{/if}}
+</nav>
+

@@ -1,0 +1,124 @@
+{
+    "name": "ghost-writer",
+    "description": "Ghost theme custom tailored for my personal blog",
+    "demo": "https://nikolas-knickrehm.ghost.io",
+    "version": "0.0.1",
+    "engines": {
+        "ghost": ">=4.0.0",
+        "ghost-api": "v4"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "scripts": {
+        "dev": "gulp",
+        "zip": "gulp zip",
+        "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
+        "pretest": "gulp build",
+        "preship": "yarn test",
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+        "postship": "git fetch && gulp release",
+        "prepare": "husky install",
+        "lint:js": "eslint",
+        "lint:css": "stylelint './assets/css/**/*.css'"
+    },
+    "author": {
+        "name": "Nikolas Knickrehm",
+        "email": "nikolas@knickrehm.dev",
+        "url": "https://blog.knickrehm.dev/"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nknickrehm/ghost-writer.git"
+    },
+    "bugs": "https://github.com/nknickrehm/ghost-writer/issues",
+    "contributors": "https://github.com/nknickrehm/ghost-writer/graphs/contributors",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
+        "@tryghost/release-utils": "^0.6.14",
+        "autoprefixer": "^10.2.5",
+        "cssnano": "5.0.2",
+        "eslint": "^7.26.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.2",
+        "eslint-plugin-prettier": "^3.4.0",
+        "gscan": "^4.0.2",
+        "gulp": "4.0.2",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "9.0.0",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "husky": "^6.0.0",
+        "inquirer": "8.0.0",
+        "lint-staged": "^11.0.0",
+        "postcss": "^8.2.15",
+        "postcss-import": "^14.0.2",
+        "prettier": "^2.3.0",
+        "prismjs": "^1.23.0",
+        "pump": "3.0.0",
+        "stylelint": "^13.13.1",
+        "stylelint-config-standard": "^22.0.0",
+        "tailwindcss": "^2.1.2"
+    },
+    "browserslist": [
+        "defaults"
+    ],
+    "config": {
+        "posts_per_page": 25,
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
+    },
+    "renovate": {
+        "extends": [
+            "@tryghost:theme"
+        ]
+    },
+    "lint-staged": {
+        "*.js": [
+            "yarn lint:js"
+        ],
+        "./assets/css/**/*.css": [
+            "yarn lint:css"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
+}

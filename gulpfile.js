@@ -58,6 +58,7 @@ function js(done) {
           'assets/js/lib/*.js',
           'assets/js/*.js',
           'node_modules/prismjs/prism.js',
+          'node_modules/prismjs/components/prism-yaml.js',
         ],
         {
           sourcemaps: true,

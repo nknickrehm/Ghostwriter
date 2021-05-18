@@ -66,11 +66,11 @@ h4 {
 }
 
 .content ul {
-  @apply list-disc pl-20;
+  @apply list-disc pl-10;
 }
 
 .content ol {
-  @apply list-decimal pl-20;
+  @apply list-decimal pl-10;
 }
 
 .content li {
@@ -79,6 +79,12 @@ h4 {
 
 .content pre {
   @apply text-sm !important;
+}
+
+.content code {
+  @apply text-sm font-mono px-1 py-1;
+  background: #272822;
+  color: white;
 }
 
 /* Bookmark card */

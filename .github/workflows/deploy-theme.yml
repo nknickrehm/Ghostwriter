@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: yarn install
+      - run: yarn install --production=false
       - run: yarn zip
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0

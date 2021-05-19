@@ -2,9 +2,12 @@
 
 {{#post}}
     <article class="{{post_class}}">
-        <header class="mb-10">
-            <article class="w-full">
-                <p class="mb-5"><a href="/" class="hover:text-primary">Home</a> <i class="inline-block mx-2 fa fa-angle-right"></i> <a class="hover:text-blue-400" href="{{primary_tag.url}}">{{primary_tag.name}}</a></p>
+        {{#> container htmlTag="header"}}
+            <article class="mt-10 w-full">
+                <p class="mb-5"><a href="/" class="hover:text-primary">Home</a> <i
+                        class="inline-block mx-2 fa fa-angle-right"></i> <a class="hover:text-blue-400"
+                                                                            href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                </p>
                 <h1 class="text-5xl font-bold mb-5 leading-tight">{{title}}</h1>
 
                 {{#if custom_excerpt}}
@@ -24,23 +27,25 @@
                      loading="lazy"
                 />
             {{/if}}
-        </header>
+        {{/container}}
 
-        <main class="content max-w-prose mx-auto mb-10">
+        <div class="grid w-screen left-0 mb-10 content">
             {{content}}
-        </main>
+        </div>
     </article>
 
-    <h2 class="text-4xl font-bold py-5">Next up</h2>
+    {{#> container}}
+        <h2 class="text-4xl font-bold py-5">Next up</h2>
 
-    <aside class="flex flex-wrap">
-        {{#get "posts" filter="id:-{{id}}" limit="3" include="tags" as |more_posts|}}
-            {{#if more_posts}}
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/if}}
-        {{/get}}
-    </aside>
+        <aside class="flex flex-wrap">
+            {{#get "posts" filter="id:-{{id}}" limit="3" include="tags" as |more_posts|}}
+                {{#if more_posts}}
+                    {{#foreach more_posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                {{/if}}
+            {{/get}}
+        </aside>
+    {{/container}}
 
 {{/post}}

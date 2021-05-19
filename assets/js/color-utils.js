@@ -8,5 +8,4 @@ function updateColorScheme() {
   document.documentElement.style.setProperty('--color-secondary-dark', secondaryDarkColor.toString())
 }
 
-document.addEventListener('hashchange', updateColorScheme)
 document.addEventListener('DOMContentLoaded', updateColorScheme)

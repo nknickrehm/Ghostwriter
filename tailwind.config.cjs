@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [
     './*.hbs',
@@ -17,7 +19,7 @@ module.exports = {
         '1/2': '50%',
         '2/3': '66.66%',
         '3/4': '75%',
-      }
+      },
     },
     fontSize: {
       'xs': '.75rem',
@@ -41,6 +43,15 @@ module.exports = {
       '2/3': '66.66%',
       '3/4': '75%',
       'full': '100%',
+    },
+    colors: {
+      primary: 'var(--color-primary)',
+      'primary-dark': 'var(--color-primary-dark)',
+      secondary: 'var(--color-secondary)',
+      'secondary-dark': 'var(--color-secondary-dark)',
+      white: colors.white,
+      black: colors.black,
+      gray: colors.gray,
     },
   },
   variants: {

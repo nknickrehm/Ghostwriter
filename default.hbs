@@ -7,12 +7,15 @@
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <link rel="stylesheet" type="text/css" href="{{asset "built/ghostwriter.css"}}"/>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{{asset "built/ghostwriter.css"}}"/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="{{asset "built/ghostwriter.js"}}"/>
+
+    <script src="{{asset "built/ghostwriter.js"}}" defer/>
 
     {{ghost_head}}
 
@@ -21,7 +24,7 @@
 {{#> container htmlTag=header}}
     <div class="flex flex-wrap">
         <a href="{{@site.url}}">
-            <img src="{{@site.logo}}" alt="{{@site.title}}" class="w-14 h-14 md:w-20 md:h-20 rounded-full"/>
+            <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-14 h-14 md:w-20 md:h-20 rounded-full" loading="lazy" />
         </a>
         <a href="{{@site.url}}">
             <h1 class="inline-block h-14 md:h-20 pl-5 py-4 md:py-6 font-bold">{{@site.title}}</h1>
@@ -55,8 +58,8 @@
     <div class="flex flex-wrap mb-10">
         <div class="w-full md:w-2/3 lg:w-3/4 py-5 md:px-5">
             <div class="mb-5">
-                <img src="{{@site.logo}}" alt="{{@site.title}}" class="w-10 h-10 rounded-full float-left"/>
-                <h3 class="inline-block h-15 pl-4 py-1 font-bold">{{@site.title}}</h3>
+                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-14 h-14 md:w-20 md:h-20 rounded-full float-left" loading="lazy" />
+                <h3 class="inline-block h-14 md:h-20 pl-5 py-4 md:py-6 font-bold">{{@site.title}}</h3>
             </div>
             <p>{{@site.description}}</p>
         </div>

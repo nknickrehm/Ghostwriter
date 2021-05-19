@@ -34,7 +34,19 @@ h4 {
 }
 
 .content {
-    grid-template-columns: [viewport-start] minmax(1.25rem, 1fr) [wide-start] minmax(0, calc((1280px - 65ch) / 2 - 2.5rem)) [prose-start] 65ch [prose-end] minmax(0, calc((1280px - 65ch) / 2 - 2.5rem)) [wide-end] minmax(1.25rem, 1fr) [viewport-end];
+    grid-template-columns: [viewport-start] minmax(1.25rem, 1fr) [wide-start] minmax(0, calc((1280px - 65ch) / 2 - 2.5rem)) [prose-start] minmax(300px, 65ch) [prose-end] minmax(0, calc((1280px - 65ch) / 2 - 2.5rem)) [wide-end] minmax(1.25rem, 1fr) [viewport-end];
+}
+
+@media only screen and (max-width: 1023px) {
+    .content {
+        grid-template-columns: [viewport-start] 2.5rem [wide-start] 0 [prose-start] calc(100% - 2.5rem) [prose-end] 0 [wide-end] 2.5rem [viewport-end];
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .content {
+        grid-template-columns: [viewport-start] 1.25rem [wide-start] 0 [prose-start] calc(100% - 2.5rem) [prose-end] 0 [wide-end] 1.25rem [viewport-end];
+    }
 }
 
 .content > * {

@@ -1,11 +1,11 @@
 {{!< default}}
 
-<header class="mb-10">
-    <article>
+{{#> container htmlTag="header"}}
+    <article class="mt-10">
         <p class="mb-5"><a href="/" class="hover:text-primary">Home</a> <i
                 class="inline-block mx-2 fa fa-angle-right"></i> ???</p>
         <h1 class="text-5xl font-bold mb-5">Error {{statusCode}}: {{message}}</h1>
-        <p><a class="mt-5 button text-white bg-primary hover:bg-primary-dark" href="{{@site.url}}">Go to the front page</a></p>
+        <p><a class="mt-5 button text-white bg-primary hover:bg-primary-dark" href="{{@site.url}}">Go to the frontpage</a></p>
     </article>
-</header>
+{{/container}}
 

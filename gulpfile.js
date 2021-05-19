@@ -59,6 +59,7 @@ function js(done) {
           'assets/js/*.js',
           'node_modules/prismjs/prism.js',
           'node_modules/prismjs/components/prism-yaml.js',
+          'node_modules/tinycolor2/tinycolor.js',
         ],
         {
           sourcemaps: true,

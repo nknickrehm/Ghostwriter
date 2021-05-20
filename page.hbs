@@ -1,22 +1,27 @@
 {{!< default}}
 
-{{#page}}
+{{#post}}
     <article class="{{page_class}}">
-        {{#> container htmlTag="header"}}
-            <article class="mt-10 w-full">
-                <p class="mb-5"><a href="/" class="hover:text-primary">Home</a> <i
-                        class="inline-block mx-2 fa fa-angle-right"></i> <a class="hover:text-blue-400"
-                                                                            href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-                </p>
+        <header class="wrapper">
+            <article class="w-full">
                 <h1 class="text-5xl font-bold mb-5 leading-tight">{{title}}</h1>
 
-                {{#if custom_excerpt}}
-                    <p class="mb-5">{{custom_excerpt}}</p>
+                {{#if tags}}
+                    <div class="mb-5">
+                        <a class="button bg-gray-100" disabled="true"><i class="fas fa-tags"></i></a>
+                        {{#foreach tags}}
+                            {{> tag}}
+                        {{/foreach}}
+                    </div>
+                {{/if}}
+
+                {{#if excerpt}}
+                    <p class="mb-5">{{excerpt}}</p>
                 {{/if}}
             </article>
 
             {{#if feature_image}}
-                <img class="w-full pt-10"
+                <img class="w-full pt-5"
                      srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 600w,
                             {{img_url feature_image size="l"}} 1000w,
@@ -27,10 +32,10 @@
                      loading="lazy"
                 />
             {{/if}}
-        {{/container}}
+        </header>
 
-        <main class="grid w-screen left-0 mb-10 content">
+        <div class="grid w-screen left-0 my-10 content">
             {{content}}
-        </main>
+        </div>
     </article>
-{{/page}}
+{{/post}}

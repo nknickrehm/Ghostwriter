@@ -21,40 +21,42 @@
 
 </head>
 <body class="{{body_class}} text-base">
-{{#> container htmlTag=header}}
-    <div class="flex flex-wrap">
-        <a href="{{@site.url}}">
-            <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-14 h-14 md:w-20 md:h-20 rounded-full" loading="lazy" />
-        </a>
-        <a href="{{@site.url}}">
-            <h1 class="inline-block h-14 md:h-20 pl-5 py-4 md:py-6 font-bold">{{@site.title}}</h1>
-        </a>
+
+    <div class="wrapper flex items-center {{^is "home"}}justify-between{{/is}}">
+        <div>
+            <a href="{{@site.url}}">
+                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="hidden sm:inline-block w-20 h-20 rounded-full mr-5" loading="lazy" />
+            </a>
+            <a href="{{@site.url}}">
+                <h1 class="inline-block h-20 py-6 font-bold">{{@site.title}}</h1>
+            </a>
+        </div>
+        {{^is "home"}}<a class="button bg-primary text-white" href="/"><i class="fas fa-home"></i><span class="hidden sm:inline-block ml-2">Frontpage</span></a>{{/is}}
     </div>
-{{/container}}
 
-<main>
-    {{{body}}}
-</main>
+    <main>
+        {{{body}}}
+    </main>
 
-{{#> container}}
-    <div class="w-full bg-primary rounded-md text-white text-center p-10">
-        {{#if @member}}
-            <h3 class="mx-auto text-4xl font-bold mb-5">Thanks for subscribing!</h3>
-            <p>This really means a lot to me <i class="fas fa-heart"></i></p>
-        {{else}}
-            <h3 class="mx-auto text-4xl font-bold mb-5">Want to stay up to date?</h3>
-            <form data-members-form="signup" class="mx-auto">
-                <input data-members-email
-                       class="px-4 py-2 rounded-full mr-2 w-full max-w-md text-black mb-5 outline-none" type="email"
-                       placeholder="me@example.com" required>
-                <button type="submit" class="button bg-secondary hover:bg-secondary-dark text-white">Subscribe</button>
-                <p data-members-error></p>
-            </form>
-        {{/if}}
+    <div class="wrapper">
+        <div class="w-full bg-primary rounded-md text-white text-center p-10">
+            {{#if @member}}
+                <h3 class="mx-auto text-4xl font-bold mb-5">Thanks for subscribing!</h3>
+                <p>This really means a lot to me <i class="fas fa-heart"></i></p>
+            {{else}}
+                <h3 class="mx-auto text-4xl font-bold mb-5">Want to stay up to date?</h3>
+                <form data-members-form="signup" class="mx-auto">
+                    <input data-members-email
+                           class="px-4 py-2 rounded-full mr-2 w-full max-w-md text-black mb-5 outline-none" type="email"
+                           placeholder="me@example.com" required>
+                    <button type="submit" class="button bg-secondary">Subscribe</button>
+                    <p data-members-error></p>
+                </form>
+            {{/if}}
+        </div>
     </div>
-{{/container}}
 
-{{#> container htmlTag=footer}}
+<footer class="wrapper">
     <div class="flex flex-wrap mb-10">
         <div class="w-full md:w-2/3 lg:w-3/4 py-5 md:px-5">
             <div class="mb-5">
@@ -74,7 +76,7 @@
         <p class="mb-2"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</p>
         <a class="mb-20 md:mb-0" href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
     </div>
-{{/container}}
+</footer>
 
 {{ghost_foot}}
 

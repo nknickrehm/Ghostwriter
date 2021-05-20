@@ -4,6 +4,21 @@
 
 :root {
     --color-primary: var(--ghost-accent-color);
+    --color-secondary: var(--ghost-accent-color);
+    --color-primary-dark: var(--ghost-accent-color);
+    --color-secondary-dark: var(--ghost-accent-color);
+}
+
+.hover\:bg-primary-dark:hover, .bg-primary-dark {
+    filter: brightness(90%);
+}
+
+.bg-secondary {
+    filter: hue-rotate(100deg);
+}
+
+.hover\:bg-secondary-dark:hover, .bg-secondary-dark {
+    filter: hue-rotate(100deg) brightness(90%);
 }
 
 .hide-if-suffix-is-1-1 {

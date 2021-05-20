@@ -32,8 +32,11 @@ h4 {
     @apply break-words;
 }
 
+.wrapper {
+    @apply max-w-screen-xl mx-auto pt-10 px-5 md:px-10;
+}
 .button {
-    @apply inline-block rounded-full px-4 py-2 text-lg font-bold outline-none;
+    @apply inline-block rounded px-4 py-2 text-lg font-bold outline-none;
 }
 
 .button:not([disabled]) {
@@ -77,27 +80,23 @@ h4 {
 }
 
 .content h1 {
-    @apply w-full text-5xl font-bold mt-20 mb-10;
+    @apply w-full text-5xl font-bold mt-20;
 }
 
 .content h2 {
-    @apply text-4xl font-bold mt-20 mb-10;
+    @apply text-4xl font-bold mt-20;
 }
 
 .content h3 {
-    @apply text-3xl font-bold mt-20 mb-10;
+    @apply text-3xl font-bold mt-20;
 }
 
 .content h4 {
-    @apply text-2xl font-bold mt-20 mb-10;
+    @apply text-2xl font-bold mt-20;
 }
 
 .content p {
-    @apply my-10;
-}
-
-.content h1 + p, .content h2 + p, .content h3 + p, .content h4 + p {
-    @apply mt-0;
+    @apply mt-10;
 }
 
 .content hr {
@@ -105,7 +104,11 @@ h4 {
 }
 
 .content figure {
-    @apply my-10;
+    @apply mt-10;
+}
+
+.content pre {
+    @apply mt-10;
 }
 
 .content figure figcaption {
@@ -113,11 +116,11 @@ h4 {
 }
 
 .content ul {
-    @apply list-disc pl-10;
+    @apply mt-10 list-disc pl-10;
 }
 
 .content ol {
-    @apply list-decimal pl-10;
+    @apply mt-10 list-decimal pl-10;
 }
 
 .content li {
@@ -129,9 +132,19 @@ h4 {
 }
 
 .content code {
-    @apply text-sm font-mono px-1 py-1;
-    background: #272822;
-    color: white;
+    @apply text-sm font-mono px-1 py-1 rounded text-primary;
+}
+
+.content p code {
+    @apply bg-gray-100 text-primary rounded;
+}
+
+.content blockquote {
+    @apply mt-10 border-l-8 border-primary bg-gray-100 px-6 py-3 rounded;
+}
+
+.content blockquote p {
+    @apply m-0;
 }
 
 /* Bookmark card */

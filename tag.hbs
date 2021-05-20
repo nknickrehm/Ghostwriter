@@ -1,19 +1,15 @@
 {{!< default}}
 
-{{#> container}}
+<div class="wrapper">
     <header class="flex flex-wrap items-center mb-10">
         {{#tag}}
             <article class="w-full md:w-1/2 md:pr-5">
-                <p class="mb-5"><a href="/" class="hover:text-blue-400">Home</a> <i
-                        class="inline-block mx-2 fa fa-angle-right"></i> <a href="{{url}}"
-                                                                            class="hover:text-blue-400">{{name}}</a></p>
                 <h1 class="text-5xl font-bold mb-5">{{name}}</h1>
                 <p>
                     {{#if description}}
                         {{description}}
                     {{else}}
-                        A collection of {{plural ../pagination.total empty='zero posts' singular='% post'
-                                                 plural='% posts'}}
+                        A collection of {{plural ../pagination.total empty='zero posts' singular='% post' plural='% posts'}}
                     {{/if}}
                 </p>
             </article>
@@ -21,9 +17,9 @@
             {{#if feature_image}}
                 <img class="w-full pt-10 md:pt-0 md:w-1/2 md:pl-5"
                      srcset="{{img_url feature_image size="s"}} 300w,
-                            {{img_url feature_image size="m"}} 600w,
-                            {{img_url feature_image size="l"}} 1000w,
-                            {{img_url feature_image size="xl"}} 2000w"
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w"
                      sizes="(max-width: 1000px) 400px, 800px"
                      src="{{img_url feature_image size="m"}}"
                      alt="{{title}}"
@@ -33,7 +29,7 @@
         {{/tag}}
     </header>
 
-    <main>
+    <section>
         <div class="flex flex-wrap">
             {{#foreach posts}}
                 {{> "post-card"}}
@@ -42,5 +38,5 @@
 
         {{pagination}}
 
-    </main>
-{{/container}}
+    </section>
+</div>

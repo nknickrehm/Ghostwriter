@@ -88,8 +88,16 @@ h4 {
     @apply text-3xl font-bold mt-20 mb-10;
 }
 
+.content h4 {
+    @apply text-2xl font-bold mt-20 mb-10;
+}
+
 .content p {
     @apply my-10;
+}
+
+.content h1 + p, .content h2 + p, .content h3 + p, .content h4 + p {
+    @apply mt-0;
 }
 
 .content hr {

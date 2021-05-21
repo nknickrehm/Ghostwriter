@@ -12,6 +12,7 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
 const REPO = 'nknickrehm/Ghostwriter'
+const CHANGELOG_PATH = path.join(process.cwd(), 'changelog.md')
 
 function serve(done) {
   livereload.listen()

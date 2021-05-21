@@ -138,19 +138,6 @@ module.exports.release = async () => {
     const previousVersion = releasesResponse[0].tag_name || releasesResponse[0].name
     console.log(`Previous version: ${previousVersion}`)
 
-    const changelog = new releaseUtils.Changelog({
-      changelogPath: CHANGELOG_PATH,
-      folder: path.join(process.cwd(), '.'),
-    })
-
-    changelog
-      .write({
-        githubRepoPath: `https://github.com/${REPO}`,
-        lastVersion: previousVersion,
-      })
-      .sort()
-      .clean()
-
     const newReleaseResponse = await releaseUtils.releases.create({
       draft: true,
       preRelease: false,

@@ -19,7 +19,7 @@
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
         "preship": "yarn zip && yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+        "ship": "yarn version && git push --follow-tags",
         "postship": "git fetch && gulp release",
         "prepare": "husky install",
         "lint:js": "eslint",

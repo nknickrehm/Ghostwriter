@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: '14'
       - run: yarn install --production=false
+      - run: touch changelog.md
       - run: yarn ship
   deploy-theme:
     runs-on: ubuntu-18.04

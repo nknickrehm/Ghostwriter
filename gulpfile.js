@@ -3,7 +3,6 @@ const {
 } = require('gulp')
 const fs = require('fs')
 const pump = require('pump')
-const path = require('path')
 const releaseUtils = require('@tryghost/release-utils')
 const livereload = require('gulp-livereload')
 const postcss = require('gulp-postcss')
@@ -12,7 +11,6 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
 const REPO = 'nknickrehm/Ghostwriter'
-const CHANGELOG_PATH = path.join(process.cwd(), 'changelog.md')
 
 function serve(done) {
   livereload.listen()
@@ -138,21 +136,8 @@ module.exports.release = async () => {
     const previousVersion = releasesResponse[0].tag_name || releasesResponse[0].name
     console.log(`Previous version: ${previousVersion}`)
 
-    const changelog = new releaseUtils.Changelog({
-      changelogPath: CHANGELOG_PATH,
-      folder: path.join(process.cwd(), '.'),
-    })
-
-    changelog
-      .write({
-        githubRepoPath: `https://github.com/${REPO}`,
-        lastVersion: previousVersion,
-      })
-      .sort()
-      .clean()
-
     const newReleaseResponse = await releaseUtils.releases.create({
-      draft: false,
+      draft: true,
       preRelease: false,
       tagName: `v${newVersion}`,
       releaseName: newVersion,
@@ -162,7 +147,6 @@ module.exports.release = async () => {
         token: githubToken,
       },
       content: ['**Compatible with Ghost ≥ 4.0.0**\n\n'],
-      changelogPath: CHANGELOG_PATH,
       filterEmojiCommits: false,
     })
     console.log(`\nRelease draft generated: ${newReleaseResponse.releaseUrl}\n`)

@@ -31,7 +31,7 @@
                 <h1 class="inline-block h-20 py-6 font-bold text-2xl">{{@site.title}}</h1>
             </a>
         </div>
-        {{^is "home"}}<a class="button bg-primary text-white" href="/"><i class="fas fa-home"></i><span class="hidden sm:inline-block ml-2">Frontpage</span></a>{{/is}}
+        {{^is "home"}}<a class="button bg-primary text-white" href="/"><i class="fas fa-home"></i><span class="hidden sm:inline-block ml-2">{{t "Frontpage"}}</span></a>{{/is}}
     </div>
 
     <main>
@@ -41,15 +41,15 @@
     <div class="wrapper">
         <div class="w-full bg-primary rounded-md text-white text-center p-10">
             {{#if @member}}
-                <h3 class="mx-auto text-4xl font-bold mb-5">Thanks for subscribing!</h3>
-                <p>This really means a lot to me <i class="fas fa-heart"></i></p>
+                <h3 class="mx-auto text-4xl font-bold mb-5">{{t "Thanks for subscribing!"}}</h3>
+                <p>{{t "This really means a lot to me"}} <i class="fas fa-heart"></i></p>
             {{else}}
-                <h3 class="mx-auto text-4xl font-bold mb-5">Want to stay up to date?</h3>
+                <h3 class="mx-auto text-4xl font-bold mb-5">{{t "Want to stay up to date?"}}</h3>
                 <form data-members-form="signup" class="mx-auto">
                     <input data-members-email
                            class="px-4 py-2 mr-2 w-full max-w-md text-black mb-5 outline-none rounded" type="email"
-                           placeholder="me@example.com" required>
-                    <button type="submit" class="button bg-secondary">Subscribe</button>
+                           placeholder="you@mail.com" required>
+                    <button type="submit" class="button bg-secondary">{{t "Subscribe"}}</button>
                     <p data-members-error></p>
                 </form>
             {{/if}}
@@ -66,7 +66,7 @@
             <p>{{@site.description}}</p>
         </div>
         <nav class="w-full md:w-1/2 lg:w-1/4 py-5 md:px-5">
-            <h3 class="text-2xl font-bold mb-5 lg:h-20 lg:py-6">Topics</h3>
+            <h3 class="text-2xl font-bold mb-5 lg:h-20 lg:py-6">{{t "Topics"}}</h3>
             {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
                 {{#foreach tags}}
                     {{> nav-item}}
@@ -74,7 +74,7 @@
             {{/get}}
         </nav>
         <nav class="w-full md:w-1/2 lg:w-1/4 py-5 md:px-5">
-            <h3 class="text-2xl font-bold mb-5 lg:h-20 lg:py-6">Links</h3>
+            <h3 class="text-2xl font-bold mb-5 lg:h-20 lg:py-6">{{t "Links"}}</h3>
             {{navigation}}
         </nav>
     </div>
@@ -82,7 +82,8 @@
 
     <div class="flex justify-between flex-wrap">
         <p class="mb-2"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</p>
-        <a class="mb-20 md:mb-0" href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+
+        <p>{{{t "Proudly published with {ghostlink}" ghostlink="<a class=\"mb-20 md:mb-0\" href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}</p>
     </div>
 </footer>
 

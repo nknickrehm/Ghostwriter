@@ -10,9 +10,9 @@
 </head>
 <body>
 <section class="content container mx-auto">
-    <h1>Error {{statusCode}}</h1>
+    <h1>{{t "Error"}} {{statusCode}}</h1>
     <p>{{message}}</p>
-    <a class="button bg-black text-white" href="{{@site.url}}">Go to the front page</a>
+    <a class="button bg-black text-white" href="{{@site.url}}">{{t "Go to frontpage"}}</a>
 </section>
 
 {{#if errorDetails}}
@@ -24,8 +24,8 @@
                     <em>{{{rule}}}</em>
 
                     {{#foreach failures}}
-                        <p><span>Ref: {{ref}}</span></p>
-                        <p><span>Message: {{message}}</span></p>
+                        <p><span>{{t "Ref"}}: {{ref}}</span></p>
+                        <p><span>{{t "Message"}}: {{message}}</span></p>
                     {{/foreach}}
                 </li>
             {{/foreach}}

@@ -13,7 +13,7 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
 const REPO = 'nknickrehm/Ghostwriter'
-const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md')
+const CHANGELOG_PATH = path.join(process.cwd(), 'changelog.md')
 
 function serve(done) {
   livereload.listen()
@@ -177,6 +177,17 @@ module.exports.release = async () => {
       changelogPath: CHANGELOG_PATH,
     })
     console.log(`\nRelease draft generated: ${newReleaseResponse.releaseUrl}\n`)
+    console.log(newReleaseResponse)
+    const uploadResponse = await releaseUtils.releases.uploadZip({
+      github: {
+        username: 'nknickrehm',
+        token: githubToken,
+      },
+      userAgent: 'Ghostwriter',
+      zipPath: './dist/ghostwriter.zip',
+      uri: newReleaseResponse.uploadUrl.replace('{?name,label}', '?name=ghostwriter.zip'),
+    })
+    console.log(uploadResponse)
   } catch (err) {
     console.error(err)
     process.exit(1)

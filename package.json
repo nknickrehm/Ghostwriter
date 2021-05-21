@@ -1,5 +1,5 @@
 {
-    "name": "ghost-writer",
+    "name": "ghostwriter",
     "description": "Ghost theme custom tailored for my personal blog",
     "demo": "https://nikolas-knickrehm.ghost.io",
     "version": "0.1.0",
@@ -18,7 +18,7 @@
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
-        "preship": "yarn test",
+        "preship": "yarn test && NODE_ENV=production yarn zip",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
         "postship": "git fetch && gulp release",
         "prepare": "husky install",

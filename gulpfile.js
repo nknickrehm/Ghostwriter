@@ -119,7 +119,7 @@ module.exports.release = async () => {
 
   if (!githubToken) {
     console.log(
-      'Please configure your environment with a GitHub token located in GST_TOKEN',
+      'Please configure your environment with a GitHub token located in GITHUB_TOKEN',
     )
     return
   }
@@ -152,7 +152,7 @@ module.exports.release = async () => {
       .clean()
 
     const newReleaseResponse = await releaseUtils.releases.create({
-      draft: true,
+      draft: false,
       preRelease: false,
       tagName: `v${newVersion}`,
       releaseName: newVersion,

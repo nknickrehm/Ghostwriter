@@ -5,7 +5,6 @@ const fs = require('fs')
 const pump = require('pump')
 const path = require('path')
 const releaseUtils = require('@tryghost/release-utils')
-const inquirer = require('inquirer')
 const livereload = require('gulp-livereload')
 const postcss = require('gulp-postcss')
 const zip = require('gulp-zip')
@@ -116,7 +115,7 @@ module.exports.release = async () => {
 
   console.log(`\nCreating release for ${newVersion}...`)
 
-  const githubToken = process.env.GST_TOKEN
+  const githubToken = process.env.GITHUB_TOKEN
 
   if (!githubToken) {
     console.log(
@@ -126,17 +125,6 @@ module.exports.release = async () => {
   }
 
   try {
-    const result = await inquirer.prompt([
-      {
-        type: 'input',
-        name: 'compatibleWithGhost',
-        message: 'Which version of Ghost is it compatible with?',
-        default: '4.0.0',
-      },
-    ])
-
-    const { compatibleWithGhost } = result
-
     const releasesResponse = await releaseUtils.releases.get({
       userAgent: 'Ghostwriter',
       uri: `https://api.github.com/repos/${REPO}/releases`,
@@ -173,8 +161,9 @@ module.exports.release = async () => {
       github: {
         token: githubToken,
       },
-      content: [`**Compatible with Ghost ≥ ${compatibleWithGhost}**\n\n`],
+      content: ['**Compatible with Ghost ≥ 4.0.0**\n\n'],
       changelogPath: CHANGELOG_PATH,
+      filterEmojiCommits: false,
     })
     console.log(`\nRelease draft generated: ${newReleaseResponse.releaseUrl}\n`)
     console.log(newReleaseResponse)

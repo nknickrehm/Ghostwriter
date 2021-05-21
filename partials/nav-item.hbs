@@ -1,2 +1,2 @@
-<a onclick="loadTab('{{slug}}')" id="{{slug}}-nav-item"
-   class="nav-item inline-block cursor-pointer text-lg font-bold mr-4 mb-5 text-gray-800 rounded px-4 py-2 transform transition-all hover:scale-105 bg-gray-100 {{#has number="1" }}active{{/has}}">{{name}}</a>
+<li class="block mb-4 hover:text-primary"><a href="{{url absolute="true"}}">{{#if
+        label}}{{label}}{{else}}{{name}}{{/if}}</a></li>

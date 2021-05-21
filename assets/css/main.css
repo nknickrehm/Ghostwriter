@@ -40,15 +40,11 @@ h4 {
 }
 
 .button:not([disabled]) {
-    @apply transform transition-all hover:scale-105;
+    @apply transform transition-all hover:scale-105 cursor-pointer;
 }
 
-.nav-item.active {
+.front-page-tab.active {
     @apply bg-primary text-white;
-}
-
-.nav-item.active:hover {
-    @apply bg-primary-dark;
 }
 
 .content {
@@ -108,7 +104,7 @@ h4 {
 }
 
 .content pre {
-    @apply mt-10;
+    @apply mt-10 !important;
 }
 
 .content figure figcaption {

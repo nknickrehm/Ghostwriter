@@ -1,6 +1,5 @@
 <ul>
     {{#foreach navigation}}
-        <li class="block mb-4 hover:text-primary"><a href="{{url absolute="true"}}">{{#if
-                label}}{{label}}{{else}}{{name}}{{/if}}</a></li>
+        {{> nav-item}}
     {{/foreach}}
 </ul>

@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: '14'
       - run: yarn install --production=false
+      - run: yarn zip
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.4.0
         with:

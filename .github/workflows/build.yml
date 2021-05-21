@@ -1,8 +1,6 @@
 name: Build
 on:
   push:
-    branches:
-      - *
 jobs:
   deploy:
     runs-on: ubuntu-18.04

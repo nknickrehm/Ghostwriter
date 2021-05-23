@@ -78,26 +78,7 @@ h4 {
 }
 
 .content h4 {
-    @apply text-2xl font-bold mt-20;
-}
-
-.content h1 + h1,
-.content h1 + h2,
-.content h1 + h3,
-.content h1 + h4,
-.content h2 + h1,
-.content h2 + h2,
-.content h2 + h3,
-.content h2 + h4,
-.content h3 + h1,
-.content h3 + h2,
-.content h3 + h3,
-.content h3 + h4,
-.content h4 + h1,
-.content h4 + h2,
-.content h4 + h3,
-.content h4 + h4 {
- @apply mt-10;
+    @apply text-2xl font-bold mt-10;
 }
 
 .content p {

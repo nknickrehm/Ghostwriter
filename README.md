@@ -8,6 +8,8 @@
 
 This page contains everything you need to set up & customize the Ghostwriter theme for your own blog.
 
+![screenshot-desktop](https://raw.githubusercontent.com/nknickrehm/Ghostwriter/main/assets/screenshot-dektop.png)
+
 # 📺 Demo
 [My personal blog](https://nikolas-knickrehm.ghost.io) is using the latest version of the Ghostwriter theme. 
 

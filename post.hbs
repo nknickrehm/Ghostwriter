@@ -13,7 +13,9 @@
 
                 {{#if tags}}
                     <div>
-                        <a class="button bg-gray-100 mr-2 mb-5" disabled="true"><i class="fas fa-tags"></i></a>
+                        <span class="hidden md:inline-block">
+                            <a class="button bg-gray-100 mr-2 mb-5" disabled="true"><i class="fas fa-tags"></i></a>
+                        </span>
                         {{#foreach tags}}
                             {{> tag}}
                         {{/foreach}}

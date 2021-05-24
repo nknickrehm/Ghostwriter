@@ -23,9 +23,9 @@
 <body class="{{body_class}} text-base">
 
     <div class="wrapper flex items-center {{^is "home"}}justify-between{{/is}}">
-        <div class="flex flex-wrap items-center justify-items-start">
-            <a class="mr-5" href="{{@site.url}}">
-                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-20 h-20 rounded-full" loading="lazy" />
+        <div class="flex items-center justify-items-start">
+            <a href="{{@site.url}}">
+                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="hidden md:inline-block w-20 h-20 rounded-full mr-5" loading="lazy" />
             </a>
             <a href="{{@site.url}}">
                 <h1 class="inline-block h-20 py-6 font-bold text-2xl">{{@site.title}}</h1>

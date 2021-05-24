@@ -23,8 +23,8 @@
 <body class="{{body_class}} text-base">
 
     <div class="wrapper flex items-center {{^is "home"}}justify-between{{/is}}">
-        <div class="flex items-center justify-items-start">
-            <a class="hidden sm:inline-block mr-5" href="{{@site.url}}">
+        <div class="flex flex-wrap items-center justify-items-start">
+            <a class="mr-5" href="{{@site.url}}">
                 <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-20 h-20 rounded-full" loading="lazy" />
             </a>
             <a href="{{@site.url}}">

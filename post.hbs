@@ -12,8 +12,8 @@
                 <h1 class="text-5xl font-bold mb-5 leading-tight">{{title}}</h1>
 
                 {{#if tags}}
-                    <div class="mb-5">
-                        <a class="button bg-gray-100 mr-2" disabled="true"><i class="fas fa-tags"></i></a>
+                    <div>
+                        <a class="button bg-gray-100 mr-2 mb-5" disabled="true"><i class="fas fa-tags"></i></a>
                         {{#foreach tags}}
                             {{> tag}}
                         {{/foreach}}

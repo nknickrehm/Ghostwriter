@@ -60,10 +60,13 @@
     <div class="flex flex-wrap mb-10">
         <div class="w-full lg:w-1/2 py-5 md:px-5">
             <div class="mb-5">
-                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-20 md:h-20 rounded-full float-left mr-5" loading="lazy" />
-                <h3 class="inline-block h-20 py-6 font-bold text-2xl">{{@site.title}}</h3>
+                <img src="{{img_url @site.logo size="sm"}}" alt="{{@site.title}}" class="w-12 h-12 mr-3 md:w-20 md:h-20 md:mr-5 rounded-full float-left" loading="lazy" />
+                <h3 class="inline-block font-bold text-xl py-2.5 md:py-6 md:text-2xl">{{@site.title}}</h3>
             </div>
-            <p>{{@site.description}}</p>
+            <p class="mb-5">{{@site.description}}</p>
+            <p>
+                {{> social-links}}
+            </p>
         </div>
         <nav class="w-full md:w-1/2 lg:w-1/4 py-5 md:px-5">
             <h3 class="text-2xl font-bold mb-5 lg:h-20 lg:py-6">{{t "Topics"}}</h3>
@@ -83,7 +86,7 @@
     <div class="flex justify-between flex-wrap">
         <p class="mb-2"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</p>
 
-        <p>{{{t "Proudly published with {ghostlink}" ghostlink="<a class=\"mb-20 md:mb-0\" href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}</p>
+        <p>{{{t "Proudly published with {ghostlink}" ghostlink="<a class=\"mb-20 md:mb-0 hover:text-primary\" href=\"https://ghost.org/\" target=\"_blank\" rel=\"noopener\">Ghost</a>"}}}</p>
     </div>
 </footer>
 

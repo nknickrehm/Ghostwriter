@@ -20,6 +20,7 @@ On [this](https://nikolas-knickrehm.ghost.io/test-page/) hidden page you can exp
 * Fully responsive (Smartphone, Tablet & Desktop)
 * Choose your own accent color via the Ghost Admin UI  
 * Multi-language support
+* Link your preferred social media  
 * Easy to customize & extend
 * Syntax highlighting (using [Prism.js](https://prismjs.com/index.html))
 * Icons (using [Fontawesome 5 Free](https://fontawesome.com/))
@@ -60,8 +61,19 @@ NODE_ENV=production yarn zip
 ```
 This will output the theme Zip file in `./dist/ghostwriter.zip`.
 
+## 🔗 Social media
+You want to customize the social media links in `./partials/social-links.hbs` or you will link **my** social media accounts 😄
+
+```
+<!-- 
+  Copy & paste the line below for each of your accounts.
+  Replace {{url}} with the link to the account and {{icon}} with the name of the icon in Fontawesome 5
+  List of available icons: https://fontawesome.com/icons
+-->
+<a class="inline-block text-3xl mr-5 mb-5 hover:text-primary" href="{{link}}" target="_blank"><i class="fab {{icon}}"></i></a>
+```
 ## 🌈 Colors
-The easiest way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` in (`Settings` -> `Branding` -> `Accent color`). You will see a live preview of your frontpage while doing so.
+Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` in the Ghost Admin UI (`Settings` -> `Branding` -> `Accent color`). You will see a live preview of your frontpage while doing so.
 
 As Ghostwriters uses a primary and a secondary color and Ghost currently only supports to configure one of them through the UI, the secondary color is automatically calculated based on what you have selected as primary color. This means that the colors might not be a perfect match in all cases.
 

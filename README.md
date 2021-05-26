@@ -47,7 +47,7 @@ All you need to do is create a little pull request containing a translation file
 "This would be super awesome of you!": "Das wäre mega stark von dir!",
 ```
 
-# 🚀 Setup the Ghostwriter theme
+# 🚀 Set up the Ghostwriter theme
 The easiest way to set up the theme is by downloading the [latest release](https://github.com/nknickrehm/Ghostwriter/releases/latest) of Ghostwriter and uploading the Zip file to your Ghost blog (`Settings` -> `Theme` -> `Upload a theme`).
 
 # Customization
@@ -93,6 +93,15 @@ Alternatively you can ignore the color picker of Ghost and hard code the colors 
 }
 ```
 Instead of referencing the variable `var(--ghost-accent-color)` you can drop in a HEX code or RGB value.
+
+## ✨ Syntax Highlighting
+When you want to embed code snippets in a post or page, you need to inject a JS file including the language's configuration for Prism. I usually do this within the post itself to not stack up too many imports that are only used on a few pages. 
+
+At the end of your post you can add an HTML card and paste in a script tag for every programming language you have been writing a snippet for. [Cdnjs](https://cdnjs.com/libraries/prism) is hosting these JS files so you can just copy and paste the script tags from them.
+```
+<!-- e.g. for TypeScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-typescript.min.js" integrity="sha512-9CvArJQPTJqAXN0HJ9DrggF3yNXh09H/pDkKya7eo7Csk2ZisKOiTdJthVFPKyNc3M0m9ofpgfDwGei0V7pgJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```
 
 ## ✏️ Static texts
 When you are not happy with some labels or other text elements that are hard-wired in this theme you can change them by modifying the related locales file (e.g. `./locales/en.json`). Just change the string on the right side of the colon to better suit your needs.

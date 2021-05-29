@@ -121,7 +121,7 @@ h4 {
     @apply text-sm font-mono px-1 py-1 rounded text-primary;
 }
 
-.content p code {
+.content p code, .content li code {
     @apply bg-gray-100 text-primary rounded;
 }
 

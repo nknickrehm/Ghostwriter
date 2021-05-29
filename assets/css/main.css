@@ -137,6 +137,10 @@ h4 {
     @apply text-primary;
 }
 
+.content .kg-bookmark-description, .content .kg-bookmark-metadata {
+    @apply text-black;
+}
+
 /* Bookmark card */
 .kg-bookmark-card {
     @apply w-full relative;

@@ -38,7 +38,7 @@ Currently, the theme comes shipped with English and German localization. You can
 |----------|------|--------|-------------|
 | English  | en   | 100%   | @nknickrehm |
 | German   | de   | 100%   | @nknickrehm |
-| Spanish  | en   | 100%   | @manusobles |
+| Spanish  | es   | 100%   | @manusobles |
 
 # 🙏 Why is my language not supported?
 Unfortunately I am only fluid in two languages, so I am relying on others to add more translations in the future. If you can spare a few minutes, your help would be greatly appreciated!

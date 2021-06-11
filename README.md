@@ -38,6 +38,7 @@ Currently, the theme comes shipped with English and German localization. You can
 |----------|------|--------|-------------|
 | English  | en   | 100%   | @nknickrehm |
 | German   | de   | 100%   | @nknickrehm |
+| Spanish  | en   | 100%   | @manusobles |
 
 # 🙏 Why is my language not supported?
 Unfortunately I am only fluid in two languages, so I am relying on others to add more translations in the future. If you can spare a few minutes, your help would be greatly appreciated!
@@ -50,7 +51,7 @@ All you need to do is create a little pull request containing a translation file
 # 🚀 Set up the Ghostwriter theme
 The easiest way to set up the theme is by downloading the [latest release](https://github.com/nknickrehm/Ghostwriter/releases/latest) of Ghostwriter and uploading the Zip file to your Ghost blog (`Settings` -> `Theme` -> `Upload a theme`).
 
-# Customization
+# ⚙️ Customization
 You have a lot of options to customize the theme. Since everything is Open Source you can modify the theme however you like. I am very curious what people will make out of it so definitely show me your variation of it!
 
 Every customization involving code changes require you to clone the repository and setup [Node.js 14](https://nodejs.org/en/download/) + [Yarn](https://classic.yarnpkg.com/en/docs/install/). After that you must issue the command `yarn install` so that all the dependencies are set up automatically for you.

@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --color-primary: var(--ghost-accent-color);
-    --color-secondary: var(--ghost-accent-color);
-}
-
-.bg-secondary {
-    filter: hue-rotate(100deg);
-}
-
 .hide-if-suffix-is-1-1 {
     @apply hidden;
 }

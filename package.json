@@ -2,9 +2,9 @@
     "name": "ghostwriter",
     "description": "Ghost theme custom tailored for my personal blog",
     "demo": "https://nikolas-knickrehm.ghost.io",
-    "version": "0.2.5",
+    "version": "1.0.0",
     "engines": {
-        "ghost": ">=4.0.0",
+        "ghost": ">=4.32.0",
         "ghost-api": "v4"
     },
     "license": "MIT",
@@ -49,15 +49,15 @@
     "bugs": "https://github.com/nknickrehm/ghost-writer/issues",
     "contributors": "https://github.com/nknickrehm/ghost-writer/graphs/contributors",
     "devDependencies": {
-        "@tryghost/release-utils": "^0.6.14",
-        "autoprefixer": "^10.2.5",
+        "@tryghost/release-utils": "^0.6.17",
+        "autoprefixer": "^10.4.0",
         "cssnano": "5.0.2",
-        "eslint": "^7.26.0",
+        "eslint": "^7.32.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-import": "^2.23.2",
-        "eslint-plugin-prettier": "^3.4.0",
-        "gscan": "^4.0.2",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-prettier": "^3.4.1",
+        "gscan": "^4.20.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
@@ -65,15 +65,15 @@
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "husky": "^6.0.0",
-        "lint-staged": "^11.0.0",
-        "postcss": "^8.2.15",
+        "lint-staged": "^11.2.6",
+        "postcss": "^8.4.5",
         "postcss-import": "^14.0.2",
-        "prettier": "^2.3.0",
-        "prismjs": "^1.23.0",
+        "prettier": "^2.5.1",
+        "prismjs": "^1.25.0",
         "pump": "3.0.0",
         "stylelint": "^13.13.1",
         "stylelint-config-standard": "^22.0.0",
-        "tailwindcss": "^2.1.2"
+        "tailwindcss": "^2.2.19"
     },
     "browserslist": [
         "defaults"
@@ -98,6 +98,28 @@
             },
             "xl": {
                 "width": 2000
+            }
+        },
+        "custom": {
+            "secondary_color": {
+                "type": "color",
+                "default": "#000000"
+            },
+            "twitter_link": {
+                "type": "text",
+                "default": ""
+            },
+            "github_link": {
+                "type": "text",
+                "default": ""
+            },
+            "linkedin_link": {
+                "type": "text",
+                "default": ""
+            },
+            "xing_link": {
+                "type": "text",
+                "default": ""
             }
         }
     },

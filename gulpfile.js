@@ -146,7 +146,7 @@ module.exports.release = async () => {
       github: {
         token: githubToken,
       },
-      content: ['**Compatible with Ghost ≥ 4.0.0**\n\n'],
+      content: ['**Compatible with Ghost ≥ 4.32.0**\n\n'],
       changelogPath: CHANGELOG_PATH,
       filterEmojiCommits: false,
     })

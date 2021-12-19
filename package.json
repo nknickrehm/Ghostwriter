@@ -104,6 +104,22 @@
             "secondary_color": {
                 "type": "color",
                 "default": "#000000"
+            },
+            "twitter_link": {
+                "type": "text",
+                "default": ""
+            },
+            "github_link": {
+                "type": "text",
+                "default": ""
+            },
+            "linkedin_link": {
+                "type": "text",
+                "default": ""
+            },
+            "xing_link": {
+                "type": "text",
+                "default": ""
             }
         }
     },

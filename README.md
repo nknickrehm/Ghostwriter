@@ -63,16 +63,13 @@ NODE_ENV=production yarn zip
 This will output the theme Zip file in `./dist/ghostwriter.zip`.
 
 ## 🔗 Social media
-You want to customize the social media links in `./partials/social-links.hbs` or you will link **my** social media accounts 😄
+You can link social media accounts using the Ghost Admin UI. Currently, the Ghostwriter supports links to
+* Twitter
+* Github
+* LinkedIn
+* Xing
 
-```
-<!-- 
-  Copy & paste the line below for each of your accounts.
-  Replace {{url}} with the link to the account and {{icon}} with the name of the icon in Fontawesome 5
-  List of available icons: https://fontawesome.com/icons
--->
-<a class="inline-block text-3xl mr-5 mb-5 hover:text-primary" href="{{link}}" target="_blank"><i class="fab {{icon}}"></i></a>
-```
+If you want to link more/other sites you can build the theme yourself after changing `./partials/social-links.hbs` or open up an issue in this repository. I will see what I can do to help you then. The links will only be visible on your website after you have entered the URLs in the Ghost Admin UI.
 ## 🌈 Colors
 Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` and `Secondary color` in the Ghost Admin UI (`Settings` -> `Design` -> `Brand` / `Site-wide`). You will see a live preview of your frontpage while doing so.
 

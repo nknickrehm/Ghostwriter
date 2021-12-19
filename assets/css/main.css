@@ -240,3 +240,44 @@ h4 {
 .kg-gallery-row:not(:first-of-type) {
     @apply mt-2;
 }
+
+/* Button */
+.kg-button-card {
+    @apply mt-10;
+}
+
+/* Call out */
+.kg-callout-card {
+    @apply mt-10;
+}
+
+/* Toggle */
+.kg-toggle-card {
+    @apply mt-10;
+}
+
+/* Video */
+.kg-video-card {
+    @apply mt-10;
+}
+
+/* Audio */
+.kg-audio-card {
+    @apply mt-10;
+}
+
+/* File download */
+.kg-file-card {
+    @apply mt-10;
+}
+
+/* Product */
+.kg-product-card {
+    @apply mt-10;
+}
+
+/* Header */
+.kg-header-card {
+    @apply mt-10;
+}
+

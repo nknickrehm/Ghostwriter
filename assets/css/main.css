@@ -207,16 +207,14 @@ h4 {
     @apply max-w-full;
 }
 
-/* Embedded video */
-.kg-embed-card {
+/* Embedded Youtube Video */
+.ghostwriter-youtube-card {
     @apply relative h-0 overflow-hidden;
 
     padding-bottom: 56.25%;
 }
 
-.kg-embed-card iframe,
-.kg-embed-card object,
-.kg-embed-card embed {
+.ghostwriter-youtube-card iframe {
     @apply absolute top-0 left-0 w-full h-full;
 }
 

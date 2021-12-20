@@ -12,9 +12,14 @@
     <style>
         :root {
             --color-primary: var(--ghost-accent-color);
-            {{#if @custom.secondary_color}}
-                --color-secondary: {{@custom.secondary_color}};
-            {{/if}}
+            --color-secondary: {{@custom.secondary_color}};
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-primary: {{@custom.accent_color_dark_mode}};
+                --color-secondary: {{@custom.secondary_color_dark_mode}};
+            }
         }
     </style>
     <link rel="stylesheet" type="text/css" href="{{asset "built/ghostwriter.css"}}"/>

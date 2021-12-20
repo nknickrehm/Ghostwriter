@@ -313,5 +313,9 @@ h4 {
     .tag {
         @apply bg-gray-600 text-white;
     }
+
+    .content p code, .content li code {
+        @apply bg-gray-600 text-white;
+    }
 }
 

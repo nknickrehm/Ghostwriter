@@ -1,6 +1,6 @@
-# The Ghostwriter Theme for Ghost 4.x
+# The Ghostwriter Theme for Ghost 4
 
-[![Ghost version](https://img.shields.io/badge/Ghost-4.x-brightgreen)](https://github.com/TryGhost/Ghost)
+[![Ghost version](https://img.shields.io/badge/Ghost->=4.32.0-brightgreen)](https://github.com/TryGhost/Ghost)
 [![Demo](https://img.shields.io/badge/Demo-Online-yellow.svg)](https://nikolas-knickrehm.ghost.io/)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/nikolasknickrehm)
 
@@ -18,9 +18,10 @@ On [this](https://nikolas-knickrehm.ghost.io/test-page/) hidden page you can exp
 # 🔥 Features
 * Developed for the most recent version of Ghost (>=4.32.X)
 * Fully responsive (Smartphone, Tablet & Desktop)
-* Custom color scheme via the Ghost Admin UI
+* Automatic dark mode ([browser support](https://caniuse.com/?search=prefers-color-scheme))
+* Custom color scheme via the Ghost Admin UI for regular and dark mode
 * Multi-language support
-* Link your preferred social media  
+* Link your own social media accounts
 * Easy to customize & extend
 * Syntax highlighting (using [Prism.js](https://prismjs.com/index.html))
 * Icons (using [Fontawesome 5 Free](https://fontawesome.com/))
@@ -71,7 +72,7 @@ You can link social media accounts using the Ghost Admin UI. Currently, the Ghos
 
 If you want to link more/other sites you can build the theme yourself after changing `./partials/social-links.hbs` or open up an issue in this repository. I will see what I can do to help you then. The links will only be visible on your website after you have entered the URLs in the Ghost Admin UI.
 ## 🌈 Colors
-Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` and `Secondary color` in the Ghost Admin UI (`Settings` -> `Design` -> `Brand` / `Site-wide`). You will see a live preview of your frontpage while doing so.
+Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` and `Secondary color` in the Ghost Admin UI (`Settings` -> `Design` -> `Brand` / `Site-wide`). You will see a live preview of your frontpage while doing so. You will also need to specify the colors for the dark mode.
 
 ## ✨ Syntax Highlighting
 When you want to embed code snippets in a post or page, you need to inject a JS file including the language's configuration for Prism. I usually do this within the post itself to not stack up too many imports that are only used on a few pages. 

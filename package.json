@@ -2,7 +2,7 @@
     "name": "ghostwriter",
     "description": "Ghost theme custom tailored for my personal blog",
     "demo": "https://nikolas-knickrehm.ghost.io",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
         "ghost": ">=4.32.0",
         "ghost-api": "v4"
@@ -102,6 +102,14 @@
         },
         "custom": {
             "secondary_color": {
+                "type": "color",
+                "default": "#000000"
+            },
+            "accent_color_dark_mode": {
+                "type": "color",
+                "default": "#000000"
+            },
+            "secondary_color_dark_mode": {
                 "type": "color",
                 "default": "#000000"
             },

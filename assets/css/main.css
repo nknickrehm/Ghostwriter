@@ -269,6 +269,23 @@ h4 {
     @apply mt-10;
 }
 
+.kg-file-card-contents {
+    @apply break-words;
+    min-width: 50%;
+}
+
+.kg-file-card-metadata {
+    @apply inline;
+}
+
+.kg-file-card-title {
+    @apply mb-2;
+}
+
+.kg-file-card-caption {
+    @apply mb-2;
+}
+
 /* Product */
 .kg-product-card {
     @apply mt-10;

@@ -301,3 +301,17 @@ h4 {
     @apply mt-10;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        @apply bg-gray-800 text-white;
+    }
+
+    .content blockquote {
+        @apply bg-gray-600;
+    }
+
+    .tag {
+        @apply bg-gray-600 text-white;
+    }
+}
+

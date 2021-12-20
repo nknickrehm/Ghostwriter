@@ -16,6 +16,7 @@ h4 {
 .wrapper {
     @apply max-w-screen-xl mx-auto pt-10 px-5 md:px-10;
 }
+
 .button {
     @apply inline-block rounded px-4 py-2 text-lg font-bold outline-none;
 }
@@ -57,15 +58,15 @@ h4 {
 }
 
 .content h1 {
-    @apply w-full text-5xl font-bold mt-20;
+    @apply w-full text-5xl font-bold mt-10;
 }
 
 .content h2 {
-    @apply text-4xl font-bold mt-20;
+    @apply text-4xl font-bold mt-10;
 }
 
 .content h3 {
-    @apply text-3xl font-bold mt-20;
+    @apply text-3xl font-bold mt-10;
 }
 
 .content h4 {

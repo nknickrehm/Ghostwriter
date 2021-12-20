@@ -317,5 +317,13 @@ h4 {
     .content p code, .content li code {
         @apply bg-gray-600 text-white;
     }
+
+    .content .kg-bookmark-description, .content .kg-bookmark-metadata {
+        @apply text-white;
+    }
+
+    .content .kg-bookmark-content {
+        @apply bg-gray-600;
+    }
 }
 

@@ -93,4 +93,4 @@ Feel free to use Ghostwriter as a start for your own project, throw out all thos
 
 # 📄 Copyright & License
 
-Copyright © 2021 Nikolas Knickrehm - Released under the [MIT license](LICENSE).
+Copyright © 2021-2022 Nikolas Knickrehm - Released under the [MIT license](LICENSE).

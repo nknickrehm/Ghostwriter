@@ -7,6 +7,19 @@
     <meta name="HandheldFriendly" content="True"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <style>
+        :root {
+            --color-primary: var(--ghost-accent-color);
+            --color-secondary: {{@custom.secondary_color}};
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-primary: {{@custom.accent_color_dark_mode}};
+                --color-secondary: {{@custom.secondary_color_dark_mode}};
+            }
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="{{asset "built/ghostwriter.css"}}"/>
     <script src="{{asset "built/ghostwriter.js"}}" defer/>
 

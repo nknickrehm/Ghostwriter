@@ -1,6 +1,6 @@
-# The Ghostwriter Theme for Ghost 4.x
+# The Ghostwriter Theme for Ghost 4
 
-[![Ghost version](https://img.shields.io/badge/Ghost-4.x-brightgreen)](https://github.com/TryGhost/Ghost)
+[![Ghost version](https://img.shields.io/badge/Ghost->=4.32.0-brightgreen)](https://github.com/TryGhost/Ghost)
 [![Demo](https://img.shields.io/badge/Demo-Online-yellow.svg)](https://nikolas-knickrehm.ghost.io/)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/nikolasknickrehm)
 
@@ -16,11 +16,12 @@ This page contains everything you need to set up & customize the Ghostwriter the
 On [this](https://nikolas-knickrehm.ghost.io/test-page/) hidden page you can experience most content types available in Ghost in action.
 
 # 🔥 Features
-* Developed for the most recent version of Ghost (4.x)
+* Developed for the most recent version of Ghost (>=4.32.X)
 * Fully responsive (Smartphone, Tablet & Desktop)
-* Choose your own accent color via the Ghost Admin UI  
+* Automatic dark mode ([browser support](https://caniuse.com/?search=prefers-color-scheme))
+* Custom color scheme via the Ghost Admin UI for regular and dark mode
 * Multi-language support
-* Link your preferred social media  
+* Link your own social media accounts
 * Easy to customize & extend
 * Syntax highlighting (using [Prism.js](https://prismjs.com/index.html))
 * Icons (using [Fontawesome 5 Free](https://fontawesome.com/))
@@ -63,37 +64,15 @@ NODE_ENV=production yarn zip
 This will output the theme Zip file in `./dist/ghostwriter.zip`.
 
 ## 🔗 Social media
-You want to customize the social media links in `./partials/social-links.hbs` or you will link **my** social media accounts 😄
+You can link social media accounts using the Ghost Admin UI. Currently, the Ghostwriter supports links to
+* Twitter
+* Github
+* LinkedIn
+* Xing
 
-```
-<!-- 
-  Copy & paste the line below for each of your accounts.
-  Replace {{url}} with the link to the account and {{icon}} with the name of the icon in Fontawesome 5
-  List of available icons: https://fontawesome.com/icons
--->
-<a class="inline-block text-3xl mr-5 mb-5 hover:text-primary" href="{{link}}" target="_blank"><i class="fab {{icon}}"></i></a>
-```
+If you want to link more/other sites you can build the theme yourself after changing `./partials/social-links.hbs` or open up an issue in this repository. I will see what I can do to help you then. The links will only be visible on your website after you have entered the URLs in the Ghost Admin UI.
 ## 🌈 Colors
-Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` in the Ghost Admin UI (`Settings` -> `Branding` -> `Accent color`). You will see a live preview of your frontpage while doing so.
-
-As Ghostwriters uses a primary and a secondary color and Ghost currently only supports to configure one of them through the UI, the secondary color is automatically calculated based on what you have selected as primary color. This means that the colors might not be a perfect match in all cases.
-
-If you are not happy with the secondary color you received, you can do some minor changes in `./assets/css/main.css` (close to the start of the file) to change the calculation algorithm:
-```
-.bg-secondary {
-    filter: hue-rotate(100deg);
-}
-```
-You can freely modify the filter property to do quite a lot of color magic in a single line of CSS. A good short introduction and demo can be found [here](https://css-tricks.com/almanac/properties/f/filter/).
-
-Alternatively you can ignore the color picker of Ghost and hard code the colors in the theme within the same file:
-```
-:root {
-    --color-primary: var(--ghost-accent-color);
-    --color-secondary: var(--ghost-accent-color);
-}
-```
-Instead of referencing the variable `var(--ghost-accent-color)` you can drop in a HEX code or RGB value.
+Another simple way to customize the theme without writing or changing **any** code at all is by selecting the `Accent color` and `Secondary color` in the Ghost Admin UI (`Settings` -> `Design` -> `Brand` / `Site-wide`). You will see a live preview of your frontpage while doing so. You will also need to specify the colors for the dark mode.
 
 ## ✨ Syntax Highlighting
 When you want to embed code snippets in a post or page, you need to inject a JS file including the language's configuration for Prism. I usually do this within the post itself to not stack up too many imports that are only used on a few pages. 

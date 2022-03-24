@@ -25,11 +25,11 @@
                 <nav>
                     <h2 class="text-5xl font-bold mb-5">{{t "Topics"}}</h2>
                     <span class="hidden md:inline-block">
-                        <a class="button bg-gray-100 mr-2" disabled="true"><i class="fas fa-tags"></i></a>
+                        <a class="button bg-gray-100 mr-2 tag" disabled="true"><i class="fas fa-tags"></i></a>
                     </span>
                     {{#foreach tags}}
                         <a onclick="loadTab('{{slug}}')" id="{{slug}}-front-page-tab"
-                           class="front-page-tab button text-lg font-bold mr-2 mb-5 text-gray-800 rounded bg-gray-100 {{#has number="1" }}active{{/has}}">{{name}}</a>
+                           class="front-page-tab button text-lg font-bold mr-2 mb-5 text-gray-800 rounded bg-gray-100 tag {{#has number="1" }}active{{/has}}">{{name}}</a>
                     {{/foreach}}
                 </nav>
 

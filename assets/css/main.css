@@ -7,15 +7,6 @@
   src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
 }
 
-:root {
-  --color-primary: var(--ghost-accent-color);
-  --color-secondary: var(--ghost-accent-color);
-}
-
-.bg-secondary {
-  filter: hue-rotate(100deg);
-}
-
 .hide-if-suffix-is-1-1 {
   @apply hidden;
 }
@@ -72,15 +63,15 @@ h4 {
 }
 
 .content h1 {
-  @apply w-full text-5xl font-bold mt-20;
+  @apply w-full text-5xl font-bold mt-10;
 }
 
 .content h2 {
-  @apply text-4xl font-bold mt-20;
+  @apply text-4xl font-bold mt-10;
 }
 
 .content h3 {
-  @apply text-3xl font-bold mt-20;
+  @apply text-3xl font-bold mt-10;
 }
 
 .content h4 {
@@ -225,16 +216,14 @@ h4 {
   @apply max-w-full;
 }
 
-/* Embedded video */
-.kg-embed-card {
+/* Embedded Youtube Video */
+.ghostwriter-youtube-card {
   @apply relative h-0 overflow-hidden;
 
   padding-bottom: 56.25%;
 }
 
-.kg-embed-card iframe,
-.kg-embed-card object,
-.kg-embed-card embed {
+.ghostwriter-youtube-card iframe {
   @apply absolute top-0 left-0 w-full h-full;
 }
 
@@ -258,3 +247,91 @@ h4 {
 .kg-gallery-row:not(:first-of-type) {
   @apply mt-2;
 }
+
+/* Button */
+.kg-button-card {
+    @apply mt-10;
+}
+
+/* Call out */
+.kg-callout-card {
+    @apply mt-10;
+}
+
+/* Toggle */
+.kg-toggle-card {
+    @apply mt-10;
+}
+
+/* Video */
+.kg-video-card {
+    @apply mt-10;
+}
+
+/* Audio */
+.kg-audio-card {
+    @apply mt-10;
+}
+
+/* File download */
+.kg-file-card {
+    @apply mt-10;
+}
+
+.kg-file-card-contents {
+    @apply break-words;
+    min-width: 50%;
+}
+
+.kg-file-card-metadata {
+    @apply inline;
+}
+
+.kg-file-card-title {
+    @apply mb-2;
+}
+
+.kg-file-card-caption {
+    @apply mb-2;
+}
+
+/* Product */
+.kg-product-card {
+    @apply mt-10;
+}
+
+.kg-product-card-rating {
+    @apply pt-5;
+}
+
+/* Header */
+.kg-header-card {
+    @apply mt-10;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        @apply bg-gray-800 text-white;
+    }
+
+    .content blockquote {
+        @apply bg-gray-600;
+    }
+
+    .tag {
+        @apply bg-gray-600 text-white;
+    }
+
+    .content p code, .content li code {
+        @apply bg-gray-600 text-white;
+    }
+
+    .content .kg-bookmark-description, .content .kg-bookmark-metadata {
+        @apply text-white;
+    }
+
+    .content .kg-bookmark-content {
+        @apply bg-gray-600;
+    }
+}
+

@@ -2,7 +2,7 @@
     "name": "ghostwriter",
     "description": "Ghost theme custom tailored for my personal blog",
     "demo": "https://nikolas-knickrehm.ghost.io",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "engines": {
         "ghost": ">=4.32.0",
         "ghost-api": "v4"
